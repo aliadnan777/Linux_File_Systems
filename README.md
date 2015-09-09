@@ -57,6 +57,11 @@
 *  Tail packing, a scheme to reduce internal fragmentation. Tail packing, however, can have a significant performance impact. Reiser4 may have improved this by packing tails where it does not hurt performance
 
 
+### To determing your linux file system type
+
+* `df -hT | awk '{print $1,$2,$NF}' | grep "^/dev"/dev/sda3 ext3 //dev/sda1 ext3 /boot`
+
+
 ### Creating an ext2, or ext3, or ext4 filesystem
 * Once you’ve partitioned your hard disk using fdisk command, use `mke2fs` to create either ext2, ext3, or ext4 file system
 * Create an ext2 file system:
