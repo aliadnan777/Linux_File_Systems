@@ -107,6 +107,8 @@
 
 ### Journling
 * is a dedicated area in the file system, where all the changes are tracked, when the system crashes the possibility of file system corruption is less because of journling
+* journling file system that maintain a special file called journal that is used to repair any inconsistencies that accure as the result of improper shut down of your computer
+* journling file system write metadata into the jouurnal that is flushed to the HDD before each command return in the event of system crash 
 
 ### Fragmented file
 *  It's a file on your computer too big to store in the place on the hard drive where it was originally created. So it gets cut up and spread out into various places. Naturally, it will take your drive longer to use the file because of the need to do multiple operations to open the file.
