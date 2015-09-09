@@ -52,38 +52,42 @@
 * Create an ext2 file system:
   * `mkfs.ext3 /dev/sda1`
 
-  *(or)
+  * (or)
 
-  *`mke2fs –j /dev/sda1`
+  * `mke2fs –j /dev/sda1`
 * Create an ext4 file system:
 
-  *`mkfs.ext4 /dev/sda1`
+  * `mkfs.ext4 /dev/sda1`
 
-  *(or)
+  * (or)
 
-  *`mke2fs -t ext4 /dev/sda1`
+  * `mke2fs -t ext4 /dev/sda1`
 
 ### Converting ext2 to ext3
 
-  *For example, if you are upgrading /dev/sda2 that is mounted as /home, from ext2 to ext3, do the following.
+  * For example, if you are upgrading /dev/sda2 that is mounted as /home, from ext2 to ext3, do the following.
 
-  *`umount /dev/sda2`
+  * `umount /dev/sda2`
 
-  *`tune2fs -j /dev/sda2`
+  * `tune2fs -j /dev/sda2`
 
-  *`mount /dev/sda2 /home`
+  * `mount /dev/sda2 /home`
   
 ### Converting ext3 to ext4
 
-  *If you are upgrading /dev/sda2 that is mounted as /home, from ext3 to ext4, do the following.
+  * If you are upgrading /dev/sda2 that is mounted as /home, from ext3 to ext4, do the following.
 
-  *`umount /dev/sda2`
+  * `umount /dev/sda2`
 
-  *`tune2fs -O extents,uninit_bg,dir_index /dev/sda2`
+  * `tune2fs -O extents,uninit_bg,dir_index /dev/sda2`
 
-  *`e2fsck -pf /dev/sda2`
+  * `e2fsck -pf /dev/sda2`
 
-  *`mount /dev/sda2 /home`
+  * `mount /dev/sda2 /home`
 
 ### Journling
 * is a dedicated area in the file system, where all the changes are tracked, when the system crashes the possibility of file system corruption is less because of journling
+
+### Fragmented file
+*  It's a file on your computer too big to store in the place on the hard drive where it was originally created. So it gets cut up and spread out into various places. Naturally, it will take your drive longer to use the file because of the need to do multiple operations to open the file.
+*  Over time, both the file and the hard disk itself become fragmented, and your computer slows down as it has to look in many different places to open a file. Disk Defragmenter is a tool that rearranges the data on your hard disk and reunites fragmented files so your computer can run more efficiently
