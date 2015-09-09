@@ -56,6 +56,7 @@
 *  it was the first journaling file system to be included in the standard kernel
 *  ReiserFS is the default file system on the Elive, Xandros, Linspire, GoboLinux, and Yoper Linux distributions
 *  Metadata-only journaling (also block journaling, since Linux 2.6.8), its most-publicized advantage over what was the stock Linux file system at the time, ext2.
+*  XFS epitomizes the high-performance journaling filesystem of the future
 *  Online resizing (growth only), with or without an underlying volume manager such as LVM. Since then, Namesys has also provided tools to resize (both grow and shrink) ReiserFS file systems offline.
 *  Tail packing, a scheme to reduce internal fragmentation. Tail packing, however, can have a significant performance impact. Reiser4 may have improved this by packing tails where it does not hurt performance
 
@@ -72,14 +73,14 @@
 * Create an ext3 file system:
   * `mkfs.ext3 /dev/sda1`
 
-  * (or)
+  * or
 
   * `mke2fs –j /dev/sda1`
 * Create an ext4 file system:
 
   * `mkfs.ext4 /dev/sda1`
 
-  * (or)
+  * or
 
   * `mke2fs -t ext4 /dev/sda1`
 
@@ -108,7 +109,8 @@
 ### Journling
 * is a dedicated area in the file system, where all the changes are tracked, when the system crashes the possibility of file system corruption is less because of journling
 * journling file system that maintain a special file called journal that is used to repair any inconsistencies that accure as the result of improper shut down of your computer
-* journling file system write metadata into the jouurnal that is flushed to the HDD before each command return in the event of system crash 
+* journling file system write metadata into the jouurnal that is flushed to the HDD before each command return in the event of system crash
+* It also recovers unsaved data and stores it in the location where it would have gone if the computer had not crashed, making it an important feature for mission-critical applications
 
 ### Fragmented file
 *  It's a file on your computer too big to store in the place on the hard drive where it was originally created. So it gets cut up and spread out into various places. Naturally, it will take your drive longer to use the file because of the need to do multiple operations to open the file.
