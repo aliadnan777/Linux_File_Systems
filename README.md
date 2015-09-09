@@ -44,6 +44,18 @@
   * stripe aware allocation policies
   * delayed allocation
   * space free allocation
+ 
+
+### ReiserFS
+*  ReiserFS is a general-purpose, journaled computer file system
+*  ReiserFS is currently supported on Linux (without quota support)
+*  Introduced in version 2.4.1 of the Linux kernel
+*  it was the first journaling file system to be included in the standard kernel
+*  ReiserFS is the default file system on the Elive, Xandros, Linspire, GoboLinux, and Yoper Linux distributions
+*  Metadata-only journaling (also block journaling, since Linux 2.6.8), its most-publicized advantage over what was the stock Linux file system at the time, ext2.
+*  Online resizing (growth only), with or without an underlying volume manager such as LVM. Since then, Namesys has also provided tools to resize (both grow and shrink) ReiserFS file systems offline.
+*  Tail packing, a scheme to reduce internal fragmentation. Tail packing, however, can have a significant performance impact. Reiser4 may have improved this by packing tails where it does not hurt performance
+
 
 ### Creating an ext2, or ext3, or ext4 filesystem
 * Once you’ve partitioned your hard disk using fdisk command, use mke2fs to create either ext2, ext3, or ext4 file system
