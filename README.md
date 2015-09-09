@@ -58,7 +58,7 @@
 
 
 ### Creating an ext2, or ext3, or ext4 filesystem
-* Once you’ve partitioned your hard disk using fdisk command, use mke2fs to create either ext2, ext3, or ext4 file system
+* Once you’ve partitioned your hard disk using fdisk command, use `mke2fs` to create either ext2, ext3, or ext4 file system
 * Create an ext2 file system:
   * `mke2fs /dev/sda1`
 * Create an ext2 file system:
