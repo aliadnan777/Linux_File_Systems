@@ -1,5 +1,8 @@
 # Linux_File_Systems
 
+### File System
+* A filesystem is the methods and data structures that an operating system uses to keep track of files on a disk or partition; that is, the way the files are organized on the disk.
+
 ### Ext2
 * stand for second extended file system
 * does not have journling features
